@@ -20,16 +20,22 @@ l'interaction et mieux expliquer les mouvements des voitures ainsi que l'algorit
 
 ## Guide d’installation
 
-Deux méthodes peuvent être utilisées pour installer l’application. Conda facilite l’utilisation de 
+Trois méthodes peuvent être utilisées pour installer l’application. Conda facilite l’utilisation de
 plusieurs environnements différents sur votre machine, tandis que pip est beaucoup plus rapide.
+La méthode la plus simple est l'utilisation de Docker.
 
-### 1) Méthode d'installation utilisant Conda
+### 1) Image Docker
+
+Un Dockerfile est disponible pour contruire l'image Docker. Le script `build_run_demo_docker.sh` automatise la compilation
+et le lancement du conteneur Docker.
+
+### 2) Méthode d'installation utilisant Conda
 
 Pour l'installation avec Conda, vous pouvez exécutez le script shell 'install.sh'. Pour lancer l'application, vous pouvez
 exécuter le fichier 'start.sh'.
 Si vous ne souhaitez pas utiliser ces scripts, vous pouvez suivre les étapes ci-dessous.
 
-#### 1.1) Installation de Miniconda
+#### 2.1) Installation de Miniconda
 
 Installez Miniconda si ce n’est pas déjà installé sur votre machine.
 
@@ -46,7 +52,7 @@ et rentrez la commande :
 bash Miniconda3-py311_24.5.0-0-Linux-x86_64.sh
 ```
 
-#### 1.2) Préparation de l'environnement Conda
+#### 2.2) Préparation de l'environnement Conda
 
 Créez un nouvel environnement avec la bonne version de Python :
 ```bash
@@ -71,7 +77,7 @@ conda activate sim_gen
 python src/main.py
 ```
 
-### 2) Méthode d'installation utilisant pip
+### 3) Méthode d'installation utilisant pip
 
 Installez Python 3.11 si ce n’est pas déjà installé sur votre machine. Pour ce faire, allez sur le lien
  “https://www.python.org/downloads/release/python-3119/".

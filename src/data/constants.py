@@ -1,4 +1,5 @@
 import os.path  # To get the path of the file
+import sys
 
 """
 This file contains all the constants of the game used in multiple other files
@@ -18,5 +19,20 @@ START_POSITIONS = [(718, 168), (760, 180), (355, 184), (730, 170), (734, 241), (
 START_ANGLES = [0, 0, 0, 0, 0, 0, 190, 210]  # Start angle
 CAR_SIZES = [13, 10, 12, 11, 20, 15, 5, 5]  # Size of the cars
 
-PATH_DATA = os.path.dirname(__file__) + '/../../data/'  # Path of the data folder
-PATH_IMAGE = os.path.dirname(__file__) + '/../../images/'  # Path of the image folder
+# PATH_DATA = os.path.abspath(os.path.dirname(__file__) + '/../../data/') + '/'  # Path of the data folder
+# PATH_IMAGE = os.path.abspath(os.path.dirname(__file__) + '/../../images/') + '/'  # Path of the image folder
+
+
+def resource_path(relative_path):
+    """ Get absolute path to resource, works for dev and for PyInstaller """
+    try:
+        # PyInstaller creates a temp folder and stores path in _MEIPASS
+        base_path = sys._MEIPASS
+    except Exception:
+        base_path = os.path.abspath(".")
+
+    return os.path.join(base_path, relative_path)
+
+
+PATH_DATA = resource_path('data/')
+PATH_IMAGE = resource_path('images/')
