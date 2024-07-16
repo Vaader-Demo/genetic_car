@@ -34,23 +34,23 @@ Si vous ne souhaitez pas utiliser ces scripts, vous pouvez suivre les étapes ci
 Installez Miniconda si ce n’est pas déjà installé sur votre machine.
 
 ##### Windows
-Allez sur le lien "https://docs.conda.io/en/latest/miniconda-other-installer-links.html" et télécharger l'exécutable pour
-Python 3.8. Après avoir téléchargé le fichier, installez-le en suivant les instructions. Les prochaines commandes seront
+Allez sur le lien "https://docs.anaconda.com/miniconda/miniconda-other-installer-links/" et télécharger l'exécutable pour
+Python 3.11. Après avoir téléchargé le fichier, installez-le en suivant les instructions. Les prochaines commandes seront
 à rentrer dans l'invite de commande Anaconda Prompt.
 
 ##### Linux
-Allez sur le lien "https://docs.conda.io/en/latest/miniconda-other-installer-links.html" et télécharger le fichier 
-correspondant à Python 3.8. Après avoir téléchargé le fichier, ouvrez un terminal dans le dossier où se trouve le fichier 
+Allez sur le lien "https://docs.anaconda.com/miniconda/miniconda-other-installer-links/" et télécharger le fichier
+correspondant à Python 3.11. Après avoir téléchargé le fichier, ouvrez un terminal dans le dossier où se trouve le fichier
 et rentrez la commande :
 ```bash
-bash Miniconda3-latest-Linux-x86_64.sh
+bash Miniconda3-py311_24.5.0-0-Linux-x86_64.sh
 ```
 
 #### 1.2) Préparation de l'environnement Conda
 
 Créez un nouvel environnement avec la bonne version de Python :
 ```bash
-conda create --name sim_gen python=3.8.10
+conda create --name sim_gen python=3.11.9
 ```
 
 Activez cet environnement :
@@ -60,10 +60,10 @@ conda activate sim_gen
 
 Installez toutes les librairies nécessaires avec ces commandes (cette partie peut prendre du temps) :
 ```bash
-conda install -c conda-forge pygame=2.4.0
-conda install -c conda-forge numpy=1.24.3
-conda install -c fastai opencv-python-headless=4.7.0
-conda install -c conda-forge matplotlib-base=3.7.1
+conda install -c conda-forge pygame=2.6.0
+conda install -c conda-forge numpy=1.26.4
+conda install -c fastai opencv-python-headless=4.10.0.84
+conda install -c conda-forge matplotlib-base=3.9.1
 ```
 Pour démarrer l’application, ouvrez un terminal dans le dossier du projet et lancez les commandes :
 ```bash
@@ -73,15 +73,12 @@ python src/main.py
 
 ### 2) Méthode d'installation utilisant pip
 
-Installez Python 3.8 si ce n’est pas déjà installé sur votre machine. Pour ce faire, allez sur le lien
- “https://www.python.org/downloads/release/python-381". 
+Installez Python 3.11 si ce n’est pas déjà installé sur votre machine. Pour ce faire, allez sur le lien
+ “https://www.python.org/downloads/release/python-3119/".
 
 Installez toutes les librairies nécessaires avec ces commandes :
 ```bash
-pip install pygame==2.4.0
-pip install numpy==1.24.3
-pip install opencv-python==4.7.0.72
-pip install matplotlib==3.7.1
+pip install -r requirements.txt
 ```
 
 Pour démarrer l’application, ouvrez un terminal dans le dossier du projet et lancez cette commande :
