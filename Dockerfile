@@ -9,10 +9,7 @@ RUN apt-get install -y python3-opencv
 
 RUN pip install pyinstaller
 
-COPY src ./src
-COPY data ./data
-COPY images ./images
-COPY requirements.txt .
+COPY . /app
 
 RUN pip install -r requirements.txt
 

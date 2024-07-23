@@ -7,10 +7,7 @@ RUN apt-get update && apt-get -y install libsdl2-2.0-0 libsdl2-mixer-2.0-0 libsd
 
 RUN apt-get install -y python3-opencv
 
-COPY src ./src
-COPY data ./data
-COPY images ./images
-COPY requirements.txt .
+COPY . /app
 
 RUN pip install -r requirements.txt
 
