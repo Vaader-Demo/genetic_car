@@ -15,12 +15,10 @@ RUN pip install -r requirements.txt
 
 RUN pyinstaller --add-data data:data --add-data images:images --onefile src/main.py
 
-FROM alpine
+
+FROM scratch
 
 COPY --from=builder /app/dist/main /bin/
-
-RUN apk add --no-cache gcompat
-
 
 COPY --from=builder /lib/x86_64-linux-gnu/libGL.so.1 /lib/x86_64-linux-gnu/libGL.so.1
 COPY --from=builder /lib/x86_64-linux-gnu/libGLdispatch.so.0 /lib/x86_64-linux-gnu/libGLdispatch.so.0
