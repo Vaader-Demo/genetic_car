@@ -17,7 +17,6 @@ Un fichier de support à la démonstration est disponible au format PDF (Support
 l'interaction et mieux expliquer les mouvements des voitures ainsi que l'algorithme génétique en lui même.
 
 
-
 ## Guide d’installation
 
 Trois méthodes peuvent être utilisées pour installer l’application. Conda facilite l’utilisation de
@@ -220,19 +219,24 @@ faire le tour de chaque circuit se trouvent dans le dossier 'data/tests/all_cars
     - **cars** : contient les voitures sauvegardées
     - **parameters** : contient les paramètres de la simulation pour chaque circuit
   
-
 - **images** : contient les images utilisées dans l'application
 
-
 - **src** : contient le code source de l'application
-    - **data**: contient les fichiers permettant de gérer les données
-    - **game**: contient les fichiers permettant de gérer la simulation
-    - **menus**: contient les fichiers permettant de gérer les menus
-    - **render**: contient les fichiers permettant de gérer l'affichage
-    - **other**: contient des fonctions diverses ainsi que les fichiers permettant de gérer la reconnaissance des dés
-    - **main.py**: fichier principal de l'application
-    - **analyze_data.py**: fichier permettant d'analyser les données de la simulation
-    - **install_env.sh**: script shell permettant d'installer l'environnement Conda
-    - **start.sh**: script shell permettant de lancer l'application
-    - **Supports.pdf**: fichier de support à la démonstration
-    - **Supports.svg**: fichier de support à la démonstration (format SVG)
+    - **data** : contient les fichiers permettant de gérer les données
+    - **game** : contient les fichiers permettant de gérer la simulation
+    - **menus** : contient les fichiers permettant de gérer les menus
+    - **render** : contient les fichiers permettant de gérer l'affichage
+    - **other** : contient des fonctions diverses ainsi que les fichiers permettant de gérer la reconnaissance des dés
+    - **main.py** : fichier principal de l'application
+    - **analyze_data.py** : fichier permettant d'analyser les données de la simulation
+- **install_env.sh** : script shell permettant d'installer l'environnement Conda
+- **start.sh** : script shell permettant de lancer l'application
+- **Supports.pdf** : fichier de support à la démonstration
+- **Supports.svg** : fichier de support à la démonstration (format SVG)
+- **build_run_demo_docker.sh** : script de compilation et lancement de l'image Docker
+- **Dockerfile**
+
+
+## Crédits
+
+Démonstrateur Python réalisé par Valentin Cherel sous la supervision de Karol Desnos et Hugo Miomandre, à partir d'une implémentation en C par Enzo Leveque, Loïs Rincé et Tanguy Raufflet, sous la supervision de Karol Desnos.
